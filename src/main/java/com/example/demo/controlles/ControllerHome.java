@@ -15,6 +15,7 @@ public class ControllerHome {
 	private JpaUsers JpaUsers;
 	@GetMapping("/hola")
 	public String hola(@RequestParam("id") int id) {
+	    System.out.println(id);
 		return "hola " + JpaUsers.listarUsers(id);
 	}
 	
